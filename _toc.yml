@@ -1,0 +1,6 @@
+format: jb-book
+root: index
+parts:
+- caption: 最初
+  chapters:
+  - file: src/sample_py
