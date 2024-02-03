@@ -1,3 +1,4 @@
-# Atomic多極子関連
-
-- [結晶場基底の活性多極子と行列要素](src/mp_cef/Oh_G7_G8.ipynb)
+---
+title: Atomic多極子関連
+date: 2023/2/3
+---
