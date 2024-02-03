@@ -1,6 +1,10 @@
 format: jb-book
 root: index
 parts:
-- caption: 最初
-  chapters:
-  - file: src/sample_py
+  - caption: 目次
+    chapters:
+      - title: Atomic多極子関連
+        file: src/atomic_multipole.md
+        sections:
+          - title: 結晶場基底の活性多極子
+            file: src/Oh_G7_G8.ipynb
