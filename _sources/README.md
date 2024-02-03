@@ -1,6 +1,3 @@
-- Table of Content
-{:toc}
-
 # MultiPie Tutorial
 
 ## Author guideline
