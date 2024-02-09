@@ -29,6 +29,7 @@ dist/
 # doc generated #
 #################
 docs/_build
+_build
 
 # testing coverage and cache #
 ##############################
