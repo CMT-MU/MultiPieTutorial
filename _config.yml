@@ -1,61 +1,26 @@
-#######################################################################################
+# Learn more at https://jupyterbook.org/customize/config.html
+
+# ==================================================
 # Book settings
-title : MultiPie Tutorial
+title: MultiPie
 author: MultiPie developers
-copyright: "2021-"
+copyright: '2021-2024'
+logo: qtdraw_logo.png
 
-# Information about where the book exists on the web
-description: >-
-  Online document for MultiPie
-
-#######################################################################################
+# ==================================================
 # Execution settings
 execute:
-  execute_notebooks           : cache
-  timeout                     : 600
+  execute_notebooks: cache
+  stderr_output: "remove"
+  allow_errors: true
+  timeout: 120
 
-#######################################################################################
-# HTML-specific settings
-#html:
-#  home_page_in_navbar         : false
-#  google_analytics_id: G-RD8N0K0C9Y
-
-# #######################################################################################
-# Interact link settings
-#notebook_interface            : "jupyterlab"
-
-#######################################################################################
-# Launch button settings
-#repository:
-  #url                         : https://github.com/CMT-MU/MultiPieTutorial.git
-  #branch                      : main
-  #notebook_interface          : jupyterlab
-#
-#launch_buttons:
-  #binderhub_url: "https://mybinder.org"  # The URL for your BinderHub (e.g., https://mybinder.org)
-launch_buttons:
-  binderhub_url: ""
-
-latex:
-  latex_engine                : "xelatex"
-  latex_documents:
-    targetname: book.tex
-
-# Bibliography settings
-bibtex_bibfiles:
-  - references.bib
-
-sphinx:
-  config:
-    bibtex_reference_style: author_year
-    language: jp
-
+# ==================================================
+# Parse and render settings
 parse:
   myst_substitutions:
       sub3: My _global_ value!
-  myst_url_schemes: [mailto, http, https]
-
-  myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+  myst_enable_extensions:
     - amsmath
     - colon_fence
     - deflist
@@ -66,3 +31,59 @@ parse:
     - replacements
     - smartquotes
     - substitution
+
+# ==================================================
+# HTML-specific settings
+html:
+  home_page_in_navbar: false
+  use_edit_page_button: false
+  use_repository_button: true
+  use_issues_button: false
+  collapse_navigation: true
+
+# ==================================================
+# LaTeX-specific settings
+latex:
+  latex_engine: "xelatex"
+  latex_documents:
+    targetname: book.tex
+
+bibtex_bibfiles:
+  - references.bib
+
+# ==================================================
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/CMT-MU/MultiPie.git
+  branch: main
+
+# ==================================================
+# Sphinx setting
+sphinx:
+  recursive_update: true
+  extra_extensions:
+  - 'sphinx.ext.autodoc'
+  - 'sphinx.ext.napoleon'
+  - 'sphinx.ext.viewcode'
+  config:
+    add_module_names: false
+    autodoc_default_options:
+      members: true
+      # member-order: 'bysource'
+      undoc-members": false
+      show-inheritance: true,
+      special-members: '__init__'
+    html_theme: sphinx_book_theme
+    html_theme_options:
+      show_prev_next: false
+      navigation_with_keys: false
+    html_show_sourcelink: false
+    html_copy_source : false
+    bibtex_reference_style: author_year
+    language: jp
+    mathjax_path: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    mathjax3_config:
+      loader:
+        load: ['[tex]/physics']
+      tex:
+        packages: { '[+]': ['physics'] }

@@ -1,8 +1,9 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
 format: jb-book
 root: index
 parts:
-- caption: 目次
+- caption: Atomic多極子関連
   chapters:
-    - file: src/atomic_multipole.md
-      sections:
-        - file: src/mp_cef/Oh_G7_G8.ipynb
+    - file: src/mp_cef/Oh_G7_G8.ipynb
