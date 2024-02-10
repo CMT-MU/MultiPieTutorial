@@ -391,7 +391,10 @@ document.write(`
 </section>
 <section id="github-pages">
 <h3>GitHub Pagesの環境設定<a class="headerlink" href="#github-pages" title="Link to this heading">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip3<span class="w"> </span>install<span class="w"> </span>jupyter-book<span class="w"> </span>ghp-import<span class="w"> </span>jupytext
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>jupyter-book<span class="w"> </span>ghp-import<span class="w"> </span>jupytext
+$<span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>-orphan<span class="w"> </span>gh-pages
+$<span class="w"> </span>git<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>*
+$<span class="w"> </span>touch<span class="w"> </span>.nojekyll
 </pre></div>
 </div>
 </section>
