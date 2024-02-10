@@ -6,8 +6,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; MultiPie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>MultiPie チュートリアル &#8212; MultiPie</title>
   
   
   
@@ -64,9 +65,10 @@ const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
-    <link rel="index" title="Index" href="#" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'README';</script>
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="結晶場基底の活性多極子と行列要素" href="src/mp_cef/Oh_G7_G8.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="jp"/>
   </head>
@@ -146,7 +148,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
 
-<a class="navbar-brand logo" href="README.html">
+<a class="navbar-brand logo" href="#">
   
   
   
@@ -237,6 +239,54 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
   title="Fullscreen mode"
@@ -281,7 +331,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1></h1>
+    <h1>MultiPie チュートリアル</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -295,13 +345,82 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <section class="tex2jax_ignore mathjax_ignore" id="multipie">
+<h1><a class="reference external" href="https://cmt-mu.github.io/MultiPieTutorial/">MultiPie チュートリアル</a><a class="headerlink" href="#multipie" title="Link to this heading">#</a></h1>
+<ul>
+<li><p>はじめに</p>
+<p>群論操作および対称性適合多極子基底生成ライブラリ<a class="reference external" href="https://github.com/CMT-MU/MultiPie">MultiPie</a>に関するチュートリアルです。
+求めたい情報を具体的に掲げて、それに答える形で操作方法を例示しています。</p>
+<p>3D描画ツール<a class="reference external" href="https://github.com/CMT-MU/QtDraw">QtDraw</a>では、本ライブラリを使用しています。</p>
+<p>QtDrawのチュートリアルは、<a class="reference external" href="https://cmt-mu.github.io/QtDrawTutorial/">こちら</a>。</p>
+</li>
+<li><p>引用に関して</p>
+<p>科学研究でQtDrawやMultiPieを用いた場合には、以下を引用していただければ幸いです。</p>
+<blockquote>
+<div><p>Hiroaki Kusunose, Rikuto Oiwa, and Satoru Hayami, Symmetry-adapted modeling for molecules and crystals, Phys. Rev. B <b>107</b>, 195118 (2023).<br>
+DOI: <a class="reference external" href="https://doi.org/10.1103/PhysRevB.107.195118">https://doi.org/10.1103/PhysRevB.107.195118</a></p>
+</div></blockquote>
+</li>
+<li><p>その他の事項</p>
+<ul class="simple">
+<li><p>執筆ガイドライン</p>
+<ul>
+<li><p>Markdownのセルで、数式の記述には<code class="docutils literal notranslate"><span class="pre">$$</span></code>, <code class="docutils literal notranslate"><span class="pre">$$</span> <span class="pre">$$</span></code> 環境を用いる。</p></li>
+<li><p>文献は、ノートブックの末尾のmarkdownセルに、リストで掲載。</p></li>
+<li><p>文献は<code class="docutils literal notranslate"><span class="pre">references.bib</span></code>に追加可。</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>GitHub Pagesの環境設定</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>jupyter-book<span class="w"> </span>ghp-import<span class="w"> </span>jupytext
+$<span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>--orphan<span class="w"> </span>gh-pages
+$<span class="w"> </span>git<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>*
+$<span class="w"> </span>touch<span class="w"> </span>.nojekyll
+</pre></div>
 </div>
+</li>
+<li><p>内容の更新</p>
+<ul>
+<li><p>ローカルのmainブランチで行う。</p></li>
+<li><p>src内に記事ファイルを作成。</p></li>
+<li><p>_toc.ymlを適切に更新。</p></li>
+<li><p>GitHubの更新 (gh-pagesへcommit, push)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>upload
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>トラブル・シューティング</p>
+<ul class="simple">
+<li><p><a class="github reference external" href="https://github.com/executablebooks/jupyter-book/issues/1541">executablebooks/jupyter-book#1541</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</section>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
