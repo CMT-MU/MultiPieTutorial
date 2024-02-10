@@ -24,8 +24,12 @@ QtDrawのチュートリアルは、[こちら](https://cmt-mu.github.io/QtDrawT
 ### GitHub Pagesの環境設定
 
 ```bash
-pip3 install jupyter-book ghp-import jupytext
+$ pip3 install jupyter-book ghp-import jupytext
+$ git switch -orphan gh-pages
+$ git rm -rf *
+$ touch .nojekyll
 ```
+
 ## 内容の更新
 - ローカルのmainブランチで行う。
 - src内に記事ファイルを作成。
