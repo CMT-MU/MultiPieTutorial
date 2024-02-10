@@ -79,7 +79,8 @@ sphinx:
       navigation_with_keys: false
     html_show_sourcelink: false
     html_copy_source : false
-    bibtex_reference_style: author_year
+    bibtex_reference_style: label
+    bibtex_default_style: "unsrt"
     language: jp
     mathjax_path: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     mathjax3_config:
